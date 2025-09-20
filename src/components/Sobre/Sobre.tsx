@@ -16,7 +16,7 @@ export default function Sobre() {
               inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-black dark:text-white">
+            <h2 className="text-2xl md:text-3xl font-bold text-text-dark dark:text-white">
               Sobre mim
             </h2>
             <div className="w-16 h-1 bg-yellow-500 mt-3 mb-8"></div>
@@ -26,7 +26,7 @@ export default function Sobre() {
           <div className="flex flex-col gap-8">
             {/* Parágrafo de descrição */}
             <p
-              className={`text-base text-gray-600 dark:text-gray-300 transition-all duration-700 ease-out delay-200 ${
+              className={`text-base text-text-dark/90 dark:text-gray-300 transition-all duration-700 ease-out delay-200 ${
                 inView
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-10'
@@ -49,12 +49,12 @@ export default function Sobre() {
                   : 'opacity-0 translate-y-10'
               }`}
             >
-              <h3 className="text-xl font-bold text-black dark:text-white mb-5">
+              <h3 className="text-xl font-bold text-text-dark dark:text-white mb-5">
                 Experiência recente
               </h3>
-              <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+              <div className="border border-gray-300 dark:border-gray-700 rounded-lg p-6">
                 <div className="flex flex-col sm:flex-row justify-between sm:items-center mb-1">
-                  <h4 className="text-lg font-bold text-black dark:text-white">
+                  <h4 className="text-lg font-bold text-text-dark dark:text-white">
                     Tribunal de Justiça de Rondônia
                   </h4>
                   <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 sm:mt-0">
@@ -64,7 +64,7 @@ export default function Sobre() {
                 <p className="text-yellow-500 font-semibold mb-3">
                   Suporte Técnico
                 </p>
-                <p className="text-base text-gray-600 dark:text-gray-300">
+                <p className="text-base text-text-dark/80 dark:text-gray-300">
                   Implementação e manutenção de sistemas, montagem/instalação e
                   configuração de equipamentos, atendimento a chamados
                   (help‑desk), manutenção de hardware e software, documentação e

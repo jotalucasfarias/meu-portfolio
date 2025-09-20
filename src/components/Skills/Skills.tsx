@@ -40,7 +40,7 @@ export default function Skills() {
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-black dark:text-white">
+          <h2 className="text-2xl md:text-3xl font-bold text-text-dark dark:text-white">
             Habilidades
           </h2>
           <div className="w-16 h-1 bg-yellow-500 mt-3 mb-8"></div>
@@ -51,7 +51,7 @@ export default function Skills() {
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className={`border border-gray-200 dark:border-gray-700 rounded-lg p-6 transition-all duration-300 ease-out hover:border-yellow-500 hover:shadow-[0_0_40px_5px_rgba(234,179,8,0.4)] ${
+              className={`border border-gray-400 dark:border-gray-700 rounded-lg p-6 transition-all duration-300 ease-out hover:border-yellow-500 hover:shadow-[0_0_40px_5px_rgba(234,179,8,0.4)] ${
                 inView
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-10'
@@ -59,10 +59,10 @@ export default function Skills() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {skill.icon}
-              <h3 className="text-lg font-bold text-black dark:text-white mb-2">
+              <h3 className="text-lg font-bold text-text-dark dark:text-white mb-2">
                 {skill.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-text-dark/90 dark:text-gray-400">
                 {skill.technologies}
               </p>
             </div>

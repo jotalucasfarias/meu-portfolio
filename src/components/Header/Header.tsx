@@ -9,14 +9,14 @@ export default function Header() {
         {/* Name/Logo */}
         <div className="flex items-center gap-2">
           {/* Yellow circle */}
-          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-          <span className="text-xl font-extrabold text-black dark:text-white">
+          <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+          <span className="text-xl font-extrabold text-text-dark dark:text-white">
             João Lucas
           </span>
         </div>
 
         <nav>
-          <ul className="hidden md:flex flex-row gap-6 text-black dark:text-white">
+          <ul className="hidden md:flex flex-row gap-6 text-text-dark dark:text-white">
             <li className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer">
               Sobre
             </li>

@@ -1,3 +1,4 @@
+import { FiArrowRight } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 
 export default function HeroBanner() {
@@ -12,33 +13,36 @@ export default function HeroBanner() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Coluna da Esquerda: Texto e Botões */}
           <div
-            className={`flex flex-col gap-6 text-center md:text-left order-2 md:order-1 transition-all duration-700 ease-out delay-500 ${
+            className={`flex flex-col gap-6 text-left order-2 md:order-1 transition-all duration-700 ease-out delay-500 ${
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-black dark:text-white leading-tight">
-              Olá, sou <span className="text-yellow-500">João Lucas</span> —{' '}
-              <br />
+            <h1
+              className="text-4xl md:text-5xl font-bold text-text-dark
+ dark:text-white leading-tight"
+            >
+              Olá, sou <span className="text-yellow-400">João Lucas</span> —{' '}
               Desenvolvedor Web & Profissional de TI
             </h1>
 
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-text-dark/80 dark:text-gray-300">
               Desenvolvedor com experiência em suporte técnico, manutenção de
               computadores e desenvolvimento front‑end. Apaixonado por
               tecnologias modernas, aprendizado contínuo e entrega de interfaces
               elegantes, acessíveis e performáticas.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
+            <div className="flex flex-row gap-4 mt-4 justify-start">
               <a
                 href="#projects"
-                className="px-8 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600 transition-all duration-300 text-center hover:-translate-y-1"
+                className="px-6 py-3 flex items-center justify-center gap-2 bg-yellow-400 text-black  rounded-lg hover:bg-yellow-400/75 transition-all duration-300 text-center hover:-translate-y-1 flex-1 whitespace-nowrap"
               >
                 Ver projetos
+                <FiArrowRight />
               </a>
               <a
                 href="#contact"
-                className="px-8 py-3 border border-yellow-500 text-black dark:text-white font-bold rounded-lg hover:bg-yellow-500/10 transition-all duration-300 text-center hover:-translate-y-1"
+                className="px-6 py-3 border border-yellow-500 text-text-dark dark:text-white font-bold rounded-lg hover:bg-yellow-500/10 transition-all duration-300 text-center hover:-translate-y-1 flex-1 whitespace-nowrap"
               >
                 Entrar em contato
               </a>
