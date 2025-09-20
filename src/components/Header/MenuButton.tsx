@@ -3,9 +3,10 @@ import { FiMenu, FiX } from 'react-icons/fi';
 
 export default function MenuButton() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(0);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
   // Impede a rolagem da página quando o menu está aberto
@@ -16,11 +17,18 @@ export default function MenuButton() {
     } else {
       document.body.style.overflow = originalStyle;
     }
-    // Cleanup function para reverter o estilo quando o componente for desmontado
     return () => {
       document.body.style.overflow = originalStyle;
     };
   }, [isMenuOpen]);
+
+  // Descobre a altura real do Header
+  useEffect(() => {
+    const header = document.querySelector('header');
+    if (header) {
+      setHeaderHeight(header.offsetHeight);
+    }
+  }, []);
 
   // Fecha o menu ao clicar em um link
   const handleLinkClick = () => {
@@ -29,9 +37,11 @@ export default function MenuButton() {
 
   return (
     <>
+      {/* Botão do menu */}
       <button
-        className="p-3 rounded duration-300 border border-gray-200 hover:bg-yellow-500/25 hover:text-black dark:border-white/20 transition-colors z-[60]"
         onClick={toggleMenu}
+        aria-label="Abrir menu"
+        className="p-3 rounded duration-300 border border-gray-200 hover:bg-yellow-500/25 hover:text-black dark:border-white/20 transition-colors z-[60]"
       >
         <div className="relative h-5 w-5">
           <FiMenu
@@ -49,61 +59,39 @@ export default function MenuButton() {
         </div>
       </button>
 
+      {/* Overlay do menu */}
       <div
+        style={{
+          top: `${headerHeight}px`, // começa logo abaixo do Header
+          height: `calc(100vh - ${headerHeight}px)`, // ocupa o resto da tela
+        }}
         className={`
-          fixed top-0 inset-x-0 bottom-0 bg-white dark:bg-black z-[55]
+          fixed inset-x-0 bottom-0
+          bg-white dark:bg-black z-[55]
           flex flex-col items-center justify-center
-          transition-all duration-500 ease-in-out overflow-hidden
-          ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}
+          transition-opacity duration-300 ease-in-out
+          ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
         `}
       >
         <nav>
           <ul className="flex flex-col items-center gap-8">
-            <li>
-              <a
-                href="#home"
-                onClick={handleLinkClick}
-                className="text-black dark:text-white text-2xl font-bold hover:text-yellow-500 transition-colors"
-              >
-                Início
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                onClick={handleLinkClick}
-                className="text-black dark:text-white text-2xl font-bold hover:text-yellow-500 transition-colors"
-              >
-                Sobre
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                onClick={handleLinkClick}
-                className="text-black dark:text-white text-2xl font-bold hover:text-yellow-500 transition-colors"
-              >
-                Habilidades
-              </a>
-            </li>
-            <li>
-              <a
-                href="#projects"
-                onClick={handleLinkClick}
-                className="text-black dark:text-white text-2xl font-bold hover:text-yellow-500 transition-colors"
-              >
-                Projetos
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                onClick={handleLinkClick}
-                className="text-black dark:text-white text-2xl font-bold hover:text-yellow-500 transition-colors"
-              >
-                Contato
-              </a>
-            </li>
+            {[
+              { href: '#home', label: 'Início' },
+              { href: '#about', label: 'Sobre' },
+              { href: '#skills', label: 'Habilidades' },
+              { href: '#projects', label: 'Projetos' },
+              { href: '#contact', label: 'Contato' },
+            ].map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className="text-black dark:text-white text-2xl font-bold hover:text-yellow-500 transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
