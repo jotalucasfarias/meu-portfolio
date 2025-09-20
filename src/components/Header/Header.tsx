@@ -4,7 +4,7 @@ import ThemeButton from './ThemeButton';
 export default function Header() {
   return (
     // colocar filter depois do border
-    <header className="w-full border-b border-gray-500/15 dark:border-gray-500/20">
+    <header className="w-full border-b border-gray-200 dark:border-white/20">
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
         {/* Name/Logo */}
         <div className="flex items-center gap-2">
@@ -17,17 +17,37 @@ export default function Header() {
 
         <nav>
           <ul className="hidden md:flex flex-row gap-6 text-text-dark dark:text-white">
-            <li className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer">
-              Sobre
+            <li>
+              <a
+                href="#about"
+                className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer"
+              >
+                Sobre
+              </a>
             </li>
-            <li className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer">
-              Habilidades
+            <li>
+              <a
+                href="#skills"
+                className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer"
+              >
+                Habilidades
+              </a>
             </li>
-            <li className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer">
-              Projetos
+            <li>
+              <a
+                href="#projects"
+                className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer"
+              >
+                Projetos
+              </a>
             </li>
-            <li className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer">
-              Contato
+            <li>
+              <a
+                href="#contact"
+                className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer"
+              >
+                Contato
+              </a>
             </li>
           </ul>
         </nav>

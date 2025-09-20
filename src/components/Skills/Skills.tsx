@@ -51,7 +51,7 @@ export default function Skills() {
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className={`border border-gray-400 dark:border-gray-700 rounded-lg p-6 transition-all duration-300 ease-out hover:border-yellow-500 hover:shadow-[0_0_40px_5px_rgba(234,179,8,0.4)] ${
+              className={`bg-white dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 rounded-lg p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_40px_5px_rgba(234,179,8,0.2)] dark:hover:border-yellow-500/40 ${
                 inView
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-10'

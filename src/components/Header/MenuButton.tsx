@@ -30,7 +30,7 @@ export default function MenuButton() {
   return (
     <>
       <button
-        className="p-3 rounded duration-300 border border-gray-500/15 hover:bg-yellow-500/25 hover:text-black dark:border-gray-500/20 transition-colors z-50"
+        className="p-3 rounded duration-300 border border-gray-200 hover:bg-yellow-500/25 hover:text-black dark:border-white/20 transition-colors z-50"
         onClick={toggleMenu}
       >
         <div className="relative h-5 w-5">

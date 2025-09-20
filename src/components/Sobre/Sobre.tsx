@@ -52,7 +52,7 @@ export default function Sobre() {
               <h3 className="text-xl font-bold text-text-dark dark:text-white mb-5">
                 Experiência recente
               </h3>
-              <div className="border border-gray-300 dark:border-gray-700 rounded-lg p-6">
+              <div className="bg-white dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 rounded-lg p-6">
                 <div className="flex flex-col sm:flex-row justify-between sm:items-center mb-1">
                   <h4 className="text-lg font-bold text-text-dark dark:text-white">
                     Tribunal de Justiça de Rondônia

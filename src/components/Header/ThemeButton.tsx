@@ -7,7 +7,7 @@ export default function ThemeButton() {
   return (
     <button
       onClick={toggleDarkMode}
-      className="p-3 rounded transition-colors duration-300 border border-gray-500/15 hover:bg-yellow-500/25 hover:text-black dark:border-gray-500/20"
+      className="p-3 rounded transition-colors duration-300 border border-gray-200 hover:bg-yellow-500/25 hover:text-black dark:border-white/20"
     >
       {isDark ? (
         <FiSun size={20} color="#F9C015" />
