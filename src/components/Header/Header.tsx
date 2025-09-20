@@ -2,8 +2,6 @@ import MenuButton from './MenuButton';
 import ThemeButton from './ThemeButton';
 
 export default function Header() {
-
-  
   return (
     // colocar filter depois do border
     <header className="w-full border-b border-gray-500/15 dark:border-gray-500/20">
@@ -34,14 +32,14 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Botão de tema */}
-        <div className="flex flex-row gap-2">
+        {/* Botões de Ação */}
+        <div className="flex items-center gap-2">
           <ThemeButton />
-          <MenuButton />
+          <div className="md:hidden">
+            <MenuButton />
+          </div>
         </div>
       </div>
-
-
     </header>
   );
 }

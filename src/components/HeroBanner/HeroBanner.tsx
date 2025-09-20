@@ -1,21 +1,69 @@
-export default function HeroBanner() {
-  return (
-    <section className="w-full h-screen flex flex-col items-center justify-center text-center px-4">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-        Hello, I'm João Lucas
-      </h1>
-      <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl">
-        A passionate Frontend Developer crafting beautiful and functional web
-        experiences.
-      </p>
-      <a
-        href="#projects"
-        className="bg-yellow-500 text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-600 transition-colors duration-300"
-      >
-        View My Work
-      </a>
+import { useInView } from 'react-intersection-observer';
 
-      
+export default function HeroBanner() {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // A animação acontece apenas uma vez
+    threshold: 0.1, // A animação começa quando 10% do elemento está visível
+  });
+
+  return (
+    <section id="home" ref={ref} className="py-20 md:py-32 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Coluna da Esquerda: Texto e Botões */}
+          <div
+            className={`flex flex-col gap-6 text-center md:text-left order-2 md:order-1 transition-all duration-700 ease-out delay-500 ${
+              inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+            }`}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-black dark:text-white leading-tight">
+              Olá, sou <span className="text-yellow-500">João Lucas</span> —{' '}
+              <br />
+              Desenvolvedor Web & Profissional de TI
+            </h1>
+
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Desenvolvedor com experiência em suporte técnico, manutenção de
+              computadores e desenvolvimento front‑end. Apaixonado por
+              tecnologias modernas, aprendizado contínuo e entrega de interfaces
+              elegantes, acessíveis e performáticas.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
+              <a
+                href="#projects"
+                className="px-8 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600 transition-all duration-300 text-center hover:-translate-y-1"
+              >
+                Ver projetos
+              </a>
+              <a
+                href="#contact"
+                className="px-8 py-3 border border-yellow-500 text-black dark:text-white font-bold rounded-lg hover:bg-yellow-500/10 transition-all duration-300 text-center hover:-translate-y-1"
+              >
+                Entrar em contato
+              </a>
+            </div>
+          </div>
+
+          {/* Coluna da Direita: Foto */}
+          <div
+            className={`flex justify-center items-center order-1 md:order-2 transition-all duration-700 ease-out delay-500 ${
+              inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+            }`}
+          >
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              <img
+                src="photo.jpeg"
+                alt="Foto de João Lucas"
+                className="rounded-full object-cover w-full h-full border-2 border-yellow-500"
+                style={{
+                  boxShadow: '0 0 40px 5px rgba(234, 179, 8, 0.4)', // Sombra amarela
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
