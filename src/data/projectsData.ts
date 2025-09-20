@@ -1,28 +1,37 @@
 export const projectsData = [
   {
-    title: 'TCC — Presença Digital no Setor Odontológico',
+    title: 'Magna Odonto',
     description:
-      'Site acessível e funcional para clínica odontológica de Porto Velho com agendamento online, painel administrativo e layout moderno e responsivo.',
-    tags: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'TailwindCSS',
-      'Firebase',
-      'UX',
-      'A11y',
-    ],
+      'Aplicação web completa para uma clínica odontológica, com sistema de agendamento de consultas e gerenciamento. Desenvolvido com Next.js e Firebase.',
+    tags: ['TypeScript', 'Next.js', 'React', 'Firebase', 'TailwindCSS'],
+    url: 'https://github.com/jotalucasfarias/projeto-magna-odonto',
   },
   {
-    title: 'Estudos Front-end',
+    title: 'Primeflix',
     description:
-      'Mini aplicações usando HTML, CSS, JavaScript/TypeScript, React e TailwindCSS, com foco em boas práticas e acessibilidade.',
-    tags: ['HTML', 'CSS', 'JS/TS', 'React', 'Tailwind'],
+      'Plataforma para explorar filmes consumindo uma API externa. Apresenta uma interface para navegar por catálogos, ver detalhes e salvar favoritos.',
+    tags: ['JavaScript', 'React', 'API', 'CSS'],
+    url: 'https://github.com/jotalucasfarias/primeflix',
   },
   {
-    title: 'Protótipos & Design',
+    title: 'Todo App com Autenticação',
     description:
-      'Criação de protótipos no Figma e organização de código com Git/GitHub para iterações rápidas e colaboração.',
-    tags: ['Figma', 'Git', 'GitHub', 'UI/UX'],
+      'Um aplicativo de lista de tarefas que inclui um sistema de autenticação de usuários, permitindo que cada pessoa gerencie suas próprias tarefas de forma privada.',
+    tags: ['JavaScript', 'React', 'Firebase', 'Autenticação', 'CSS'],
+    url: 'https://github.com/jotalucasfarias/todo-app-auth',
+  },
+  {
+    title: 'Weather Card',
+    description:
+      'Um componente que exibe a previsão do tempo em tempo real para uma localidade, consultando uma API de meteorologia. Feito com TypeScript e React.',
+    tags: ['TypeScript', 'React', 'API'],
+    url: 'https://github.com/jotalucasfarias/WeatherCard',
+  },
+  {
+    title: 'Calculadora Web',
+    description:
+      'Uma calculadora funcional construída com JavaScript puro para demonstrar a lógica de programação e manipulação do DOM, sem o uso de frameworks.',
+    tags: ['JavaScript', 'HTML', 'CSS'],
+    url: 'https://github.com/jotalucasfarias/Calculator',
   },
 ];

@@ -30,7 +30,7 @@ export default function MenuButton() {
   return (
     <>
       <button
-        className="p-3 rounded duration-300 border border-gray-200 hover:bg-yellow-500/25 hover:text-black dark:border-white/20 transition-colors z-50"
+        className="p-3 rounded duration-300 border border-gray-200 hover:bg-yellow-500/25 hover:text-black dark:border-white/20 transition-colors z-[60]"
         onClick={toggleMenu}
       >
         <div className="relative h-5 w-5">
@@ -51,7 +51,7 @@ export default function MenuButton() {
 
       <div
         className={`
-          fixed top-20 inset-x-0 bottom-0 bg-white dark:bg-black z-40
+          fixed top-0 inset-x-0 bottom-0 bg-white dark:bg-black z-[55]
           flex flex-col items-center justify-center
           transition-all duration-500 ease-in-out overflow-hidden
           ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}

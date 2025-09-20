@@ -1,5 +1,13 @@
+import { FiArrowLeft, FiArrowRight, FiExternalLink } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import { projectsData } from '../../data/projectsData';
+
+// Import do Swiper
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { A11y, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Projects() {
   const { ref, inView } = useInView({
@@ -11,7 +19,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className="py-16 md:py-24 bg-gray-50 dark:bg-[#000000] transition-colors duration-500"
+      className="py-16 md:py-24 bg-gray-50 dark:bg-black transition-colors duration-500"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho da Seção */}
@@ -26,41 +34,70 @@ export default function Projects() {
             </h2>
             <div className="w-16 h-1 bg-yellow-500 mt-3"></div>
           </div>
-          <a
-            href="#contact"
-            className="mt-6 md:mt-0 px-5 py-2 border border-yellow-500 text-text-dark dark:text-white rounded-lg hover:bg-yellow-500/10 transition-all duration-300 text-center whitespace-nowrap"
-          >
-            Disponível para novos projetos
-          </a>
+          <div className="flex items-center gap-4 mt-6 md:mt-0">
+            <div className="swiper-button-prev-custom p-3 rounded-full border border-gray-300 dark:border-white/20 text-text-dark dark:text-white hover:bg-yellow-500/10 hover:border-yellow-500/50 cursor-pointer transition-colors">
+              <FiArrowLeft />
+            </div>
+            <div className="swiper-button-next-custom p-3 rounded-full border border-gray-300 dark:border-white/20 text-text-dark dark:text-white hover:bg-yellow-500/10 hover:border-yellow-500/50 cursor-pointer transition-colors">
+              <FiArrowRight />
+            </div>
+          </div>
         </div>
 
-        {/* Grid de Projetos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Carrossel de Projetos */}
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation={{
+            nextEl: '.swiper-button-next-custom',
+            prevEl: '.swiper-button-prev-custom',
+          }}
+          pagination={{ clickable: true, el: '.swiper-pagination-custom' }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          className="!pb-12 !px-4 !py-4" // Adiciona padding para o hover e paginação
+        >
           {projectsData.map((project, index) => (
-            <div
-              key={index}
-              className={`group bg-white dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 rounded-xl p-6 flex flex-col transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_40px_5px_rgba(234,179,8,0.2)] dark:hover:border-yellow-500/40`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <h3 className="text-xl font-bold text-text-dark dark:text-white mb-3">
-                {project.title}
-              </h3>
-              <p className="text-text-dark/80 dark:text-gray-400 mb-6 flex-grow">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 bg-transparent border border-gray-300 dark:border-white/20 text-text-dark/80 dark:text-gray-300 text-sm rounded-full transition-colors duration-300 group-hover:border-yellow-500/50"
+            <SwiperSlide key={index} className="h-auto">
+              <div className="group bg-white dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 rounded-xl p-6 flex flex-col h-full transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_40px_5px_rgba(234,179,8,0.2)] dark:hover:border-yellow-500/40">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="text-xl font-bold text-text-dark dark:text-white">
+                    {project.title}
+                  </h3>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ver ${project.title} no GitHub`}
                   >
-                    {tag}
-                  </span>
-                ))}
+                    <FiExternalLink className="text-gray-400 group-hover:text-yellow-500 transition-colors" />
+                  </a>
+                </div>
+                <p className="text-text-dark/80 dark:text-gray-400 mb-6 flex-grow">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-transparent border border-gray-300 dark:border-white/20 text-text-dark/80 dark:text-gray-300 text-sm rounded-full transition-colors duration-300 group-hover:border-yellow-500/50"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+        <div className="swiper-pagination-custom text-center mt-4"></div>
       </div>
     </section>
   );
