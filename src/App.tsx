@@ -1,6 +1,7 @@
 import Header from './components/Header/Header';
 import HeroBanner from './components/HeroBanner/HeroBanner';
 import Sobre from './components/Sobre/Sobre';
+import Skills from './components/Skills/Skills';
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <Header />
       <HeroBanner />
       <Sobre />
+      <Skills />
     </div>
   );
 }

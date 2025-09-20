@@ -7,7 +7,7 @@ export default function Sobre() {
   });
 
   return (
-    <section id="about" ref={ref} className="py-20 md:py-28 overflow-hidden">
+    <section id="about" ref={ref} className="py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           {/* Título */}
