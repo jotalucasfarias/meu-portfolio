@@ -105,13 +105,19 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label="email"
+                  className="transition-colors duration-300 hover:text-yellow-500"
                 >
                   jotalucasfarias@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-4">
                 <FiPhone size={24} className="text-yellow-500" />
-                <a href="tel:+556993133189" target="_blank" aria-label="phone">
+                <a
+                  href="tel:+556993133189"
+                  target="_blank"
+                  aria-label="phone"
+                  className="transition-colors duration-300 hover:text-yellow-500"
+                >
                   (69) 99313-3189
                 </a>
               </div>
