@@ -1,9 +1,9 @@
 export const projectsData = [
   {
-    title: 'Magna Odonto',
+    title: 'Site para uma Clínica Odontológica (TCC)',
     description:
-      'Aplicação web completa para uma clínica odontológica, com sistema de agendamento de consultas e gerenciamento. Desenvolvido com Next.js e Firebase.',
-    tags: ['TypeScript', 'Next.js', 'React', 'Firebase', 'TailwindCSS'],
+      'Desenvolvimento de um site responsivo com sistema de agendamento de consultas, painel administrativo e design moderno.',
+    tags: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Firebase'],
     url: 'https://github.com/jotalucasfarias/projeto-magna-odonto',
   },
   {
@@ -14,24 +14,17 @@ export const projectsData = [
     url: 'https://github.com/jotalucasfarias/primeflix',
   },
   {
-    title: 'Todo App com Autenticação',
+    title: 'Todo List com Autenticação',
     description:
       'Um aplicativo de lista de tarefas que inclui um sistema de autenticação de usuários, permitindo que cada pessoa gerencie suas próprias tarefas de forma privada.',
     tags: ['JavaScript', 'React', 'Firebase', 'Autenticação', 'CSS'],
     url: 'https://github.com/jotalucasfarias/todo-app-auth',
   },
   {
-    title: 'Weather Card',
+    title: 'Portfólio Pessoal',
     description:
-      'Um componente que exibe a previsão do tempo em tempo real para uma localidade, consultando uma API de meteorologia. Feito com TypeScript e React.',
-    tags: ['TypeScript', 'React', 'API'],
-    url: 'https://github.com/jotalucasfarias/WeatherCard',
-  },
-  {
-    title: 'Calculadora Web',
-    description:
-      'Uma calculadora funcional construída com JavaScript puro para demonstrar a lógica de programação e manipulação do DOM, sem o uso de frameworks.',
-    tags: ['JavaScript', 'HTML', 'CSS'],
-    url: 'https://github.com/jotalucasfarias/Calculator',
+      'Site criado com React, TypeScript e TailwindCSS para apresentar minha trajetória, habilidades e projetos. Conta com design responsivo, animações suaves e integração com formulário de contato.',
+    tags: ['React', 'TypeScript', 'TailwindCSS', 'Vite'],
+    url: 'https://github.com/jotalucasfarias/meu-portfolio',
   },
 ];

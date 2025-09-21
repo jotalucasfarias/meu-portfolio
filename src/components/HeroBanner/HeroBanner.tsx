@@ -22,14 +22,15 @@ export default function HeroBanner() {
  dark:text-white leading-tight"
             >
               Olá, sou <span className="text-yellow-400">João Lucas</span> —{' '}
-              Desenvolvedor Web & Profissional de TI
+              Desenvolvedor Front-end & Profissional de TI
             </h1>
 
             <p className="text-lg text-text-dark/80 dark:text-gray-300">
-              Desenvolvedor com experiência em suporte técnico, manutenção de
-              computadores e desenvolvimento front‑end. Apaixonado por
-              tecnologias modernas, aprendizado contínuo e entrega de interfaces
-              elegantes, acessíveis e performáticas.
+              Apaixonado por tecnologia e desenvolvimento web, crio interfaces
+              modernas, acessíveis e intuitivas. Com base sólida em suporte
+              técnico e infraestrutura de TI, aplico meus conhecimentos para
+              entregar soluções práticas e performáticas, sempre focado em
+              experiência do usuário e qualidade de código.
             </p>
 
             <div className="flex flex-row gap-4 mt-4 justify-start">

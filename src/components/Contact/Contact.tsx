@@ -100,11 +100,20 @@ export default function Contact() {
             <div className="space-y-6 text-text-dark dark:text-gray-300">
               <div className="flex items-center gap-4">
                 <FiMail size={24} className="text-yellow-500" />
-                <span>jotalucasfarias@gmail.com</span>
+                <a
+                  href="mailto:jotalucasfarias@gmail.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label="email"
+                >
+                  jotalucasfarias@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-4">
                 <FiPhone size={24} className="text-yellow-500" />
-                <span>(69) 9313-3189</span>
+                <a href="tel:+556993133189" target="_blank" aria-label="phone">
+                  (69) 99313-3189
+                </a>
               </div>
               <div className="flex items-center gap-4">
                 <FiMapPin size={24} className="text-yellow-500" />
