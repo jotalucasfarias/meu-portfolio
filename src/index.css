@@ -7,6 +7,34 @@
   --color-background: #000000;
   --color-text: #ffffff;
   --color-text-dark: #2b221d;
+
+  /* Animação padrão (telas pequenas) */
+  --animate-infinite-scroll: infinite-scroll 25s linear infinite;
+}
+
+/* Para telas 'md' e maiores, use a animação 'infinite-scroll2' */
+@media (min-width: 768px) {
+  @theme {
+    --animate-infinite-scroll: infinite-scroll2 40s linear infinite;
+  }
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes infinite-scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
 }
 
 /* Estilos Customizados para o Swiper Pagination */

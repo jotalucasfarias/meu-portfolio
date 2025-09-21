@@ -5,13 +5,14 @@ import HeroBanner from './components/HeroBanner/HeroBanner';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Sobre from './components/Sobre/Sobre';
-
+import TechsBar from './components/TechsBar/TechsBar';
 export default function App() {
   return (
     <div className="bg-white dark:bg-black transition-colors duration-500">
       <Header />
       <main>
         <HeroBanner />
+        <TechsBar />
         <Sobre />
         <Skills />
         <Projects />
