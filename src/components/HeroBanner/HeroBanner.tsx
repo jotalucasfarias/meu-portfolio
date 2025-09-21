@@ -55,7 +55,7 @@ export default function HeroBanner() {
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
             }`}
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 ">
               <img
                 src="photo.jpeg"
                 alt="Foto de João Lucas"

@@ -9,7 +9,7 @@ export const projectsData = [
   {
     title: 'Primeflix',
     description:
-      'Plataforma para explorar filmes consumindo uma API externa. Apresenta uma interface para navegar por catálogos, ver detalhes e salvar favoritos.',
+      'Um site moderno e responsivo construído com React para explorar uma lista de filmes que estão em cartaz no momento. Cada filme é apresentado em um card interativo, com a opção de ver detalhes, salvar nos favoritos e assistir ao trailer.',
     tags: ['JavaScript', 'React', 'API', 'CSS'],
     url: 'https://github.com/jotalucasfarias/primeflix',
   },

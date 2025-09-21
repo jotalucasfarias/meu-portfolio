@@ -19,7 +19,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className="py-16 md:py-24 bg-gray-50 dark:bg-black transition-colors duration-500"
+      className="py-16 md:py-24 bg-white dark:bg-black transition-colors duration-500"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho da Seção */}
