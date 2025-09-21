@@ -1,5 +1,6 @@
 import { FiCode, FiDatabase, FiHardDrive, FiTool } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
+import TechsBar from '../TechsBar/TechsBar';
 
 const skillsData = [
   {
@@ -69,6 +70,7 @@ export default function Skills() {
             </div>
           ))}
         </div>
+        <TechsBar />
       </div>
     </section>
   );

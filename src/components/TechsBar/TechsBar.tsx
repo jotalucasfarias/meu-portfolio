@@ -70,13 +70,12 @@ const technologies = [
 // ];
 
 const firstRow = technologies.slice(0, technologies.length / 2);
-const secondRow = technologies.slice(technologies.length / 2);
 
 const TechCard = ({ icon, name }: { icon: React.ReactNode; name: string }) => {
   return (
     <figure
       className={cn(
-        'relative flex h-full w-48 cursor-pointer items-center justify-center gap-4 overflow-hidden rounded-xl border p-4',
+        'relative flex flex-col h-full w-48 cursor-pointer items-center justify-center gap-4 overflow-hidden rounded-xl border p-4',
         // styles
         'bg-white dark:bg-[#0f0f0f85] border-gray-400 dark:border-white/20',
         'transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_40px_5px_rgba(234,179,8,0.2)] dark:hover:border-yellow-500/40',
@@ -94,19 +93,14 @@ const TechCard = ({ icon, name }: { icon: React.ReactNode; name: string }) => {
 
 export default function TechsBar() {
   return (
-    <section className="container  mx-auto px-4 sm:px-6 lg:px-8  py-4">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10">
       <div className="relative flex flex-col items-center justify-center overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((tech) => (
             <TechCard key={tech.name} {...tech} />
           ))}
         </Marquee>
-        <Marquee reverse pauseOnHover className="[--duration:20s]">
-          {secondRow.map((tech) => (
-            <TechCard key={tech.name} {...tech} />
-          ))}
-        </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white dark:from-black transition-colors duration-500"></div>
+        <div className=" pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white dark:from-black transition-colors duration-500"></div>
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white dark:from-black transition-colors duration-500"></div>
       </div>
     </section>
