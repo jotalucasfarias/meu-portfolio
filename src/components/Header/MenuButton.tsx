@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function MenuButton() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,20 +77,24 @@ export default function MenuButton() {
         <nav>
           <ul className="flex flex-col items-center gap-8">
             {[
-              { href: '#home', label: 'Início' },
-              { href: '#about', label: 'Sobre' },
-              { href: '#skills', label: 'Habilidades' },
-              { href: '#projects', label: 'Projetos' },
-              { href: '#contact', label: 'Contato' },
+              { to: 'home', label: 'Início' },
+              { to: 'about', label: 'Sobre' },
+              { to: 'skills', label: 'Habilidades' },
+              { to: 'projects', label: 'Projetos' },
+              { to: 'contact', label: 'Contato' },
             ].map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
+              <li key={link.to}>
+                <ScrollLink
+                  to={link.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
                   onClick={handleLinkClick}
-                  className="text-black dark:text-white text-2xl font-bold hover:text-yellow-500 transition-colors"
+                  className="text-black dark:text-white text-2xl font-bold hover:text-yellow-500 transition-colors cursor-pointer"
                 >
                   {link.label}
-                </a>
+                </ScrollLink>
               </li>
             ))}
           </ul>

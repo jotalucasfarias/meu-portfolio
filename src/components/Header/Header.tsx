@@ -1,3 +1,4 @@
+import { Link as ScrollLink } from 'react-scroll';
 import MenuButton from './MenuButton';
 import ThemeButton from './ThemeButton';
 
@@ -9,44 +10,65 @@ export default function Header() {
         <div className="flex items-center gap-2">
           {/* Yellow circle */}
           <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
-          <span className="text-xl font-extrabold text-text-dark dark:text-white">
+          <ScrollLink
+            to="home"
+            smooth={true}
+            duration={500}
+            className="text-xl font-extrabold text-text-dark dark:text-white cursor-pointer"
+          >
             João Lucas
-          </span>
+          </ScrollLink>
         </div>
 
         <nav>
           <ul className="hidden md:flex flex-row gap-6 text-text-dark dark:text-white">
             <li>
-              <a
-                href="#about"
+              <ScrollLink
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
                 className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer"
               >
                 Sobre
-              </a>
+              </ScrollLink>
             </li>
             <li>
-              <a
-                href="#skills"
+              <ScrollLink
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
                 className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer"
               >
                 Habilidades
-              </a>
+              </ScrollLink>
             </li>
             <li>
-              <a
-                href="#projects"
+              <ScrollLink
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
                 className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer"
               >
                 Projetos
-              </a>
+              </ScrollLink>
             </li>
             <li>
-              <a
-                href="#contact"
+              <ScrollLink
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
                 className="hover:text-yellow-500 transition-colors duration-300 cursor-pointer"
               >
                 Contato
-              </a>
+              </ScrollLink>
             </li>
           </ul>
         </nav>

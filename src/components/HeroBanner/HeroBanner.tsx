@@ -1,5 +1,6 @@
 import { FiArrowRight } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function HeroBanner() {
   const { ref, inView } = useInView({
@@ -34,19 +35,25 @@ export default function HeroBanner() {
             </p>
 
             <div className="flex flex-row gap-4 mt-4 justify-start">
-              <a
-                href="#projects"
-                className="px-6 py-3 flex items-center justify-center gap-2 bg-yellow-400 text-black  rounded-lg hover:bg-yellow-400/75 transition-all duration-300 text-center hover:-translate-y-1 flex-1 whitespace-nowrap"
+              <ScrollLink
+                to="projects"
+                smooth={true}
+                offset={-80}
+                duration={500}
+                className="px-6 py-3 flex items-center justify-center gap-2 bg-yellow-400 text-black  rounded-lg hover:bg-yellow-400/75 transition-all duration-300 text-center hover:-translate-y-1 flex-1 whitespace-nowrap cursor-pointer"
               >
                 Ver projetos
                 <FiArrowRight />
-              </a>
-              <a
-                href="#contact"
-                className="px-6 py-3 border border-yellow-500 text-text-dark dark:text-white font-bold rounded-lg hover:bg-yellow-500/10 transition-all duration-300 text-center hover:-translate-y-1 flex-1 whitespace-nowrap"
+              </ScrollLink>
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                offset={-80}
+                duration={500}
+                className="px-6 py-3 border border-yellow-500 text-text-dark dark:text-white font-bold rounded-lg hover:bg-yellow-500/10 transition-all duration-300 text-center hover:-translate-y-1 flex-1 whitespace-nowrap cursor-pointer"
               >
                 Entrar em contato
-              </a>
+              </ScrollLink>
             </div>
           </div>
 

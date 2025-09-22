@@ -1,12 +1,7 @@
+import { Link as ScrollLink } from 'react-scroll';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <footer className="bg-white dark:bg-black border-t border-gray-200 dark:border-white/20 transition-colors duration-500">
@@ -15,12 +10,14 @@ export default function Footer() {
           <p className="text-sm text-text-dark/80 dark:text-gray-400 mb-4 sm:mb-0">
             &copy; {currentYear} João — Desenvolvedor Web
           </p>
-          <button
-            onClick={scrollToTop}
+          <ScrollLink
+            to="home"
+            smooth={true}
+            duration={500}
             className="text-sm text-yellow-500 hover:underline cursor-pointer"
           >
             Voltar ao topo
-          </button>
+          </ScrollLink>
         </div>
       </div>
     </footer>

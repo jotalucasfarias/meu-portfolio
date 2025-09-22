@@ -1,3 +1,5 @@
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
 import {
   FiGithub,
   FiLinkedin,
@@ -13,6 +15,47 @@ export default function Contact() {
     threshold: 0.1,
   });
 
+  const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  /**
+   * Lida com a submissão do formulário, enviando os dados para o EmailJS.
+   * As credenciais são carregadas de variáveis de ambiente para maior segurança.
+   */
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    if (!form.current) {
+      setIsSubmitting(false);
+      setSubmitMessage('Erro: Formulário não encontrado.');
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          setSubmitMessage('Mensagem enviada com sucesso!');
+          form.current?.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setSubmitMessage('Falha ao enviar a mensagem. Tente novamente.');
+        },
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+  };
+
   return (
     <section
       id="contact"
@@ -20,7 +63,6 @@ export default function Contact() {
       className="py-16 md:py-24 bg-white dark:bg-black transition-colors duration-500"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Cabeçalho da Seção */}
         <div
           className={`text-left transition-all duration-700 ease-out ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -42,8 +84,7 @@ export default function Contact() {
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          {/* Coluna do Formulário */}
-          <form className="lg:col-span-3">
+          <form ref={form} onSubmit={sendEmail} className="lg:col-span-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label
@@ -55,6 +96,8 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
+                  name="user_name"
+                  required
                   className="w-full p-3 rounded-lg bg-gray-50 dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 text-text-dark dark:text-white focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
                 />
               </div>
@@ -68,6 +111,8 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
+                  name="user_email"
+                  required
                   className="w-full p-3 rounded-lg bg-gray-50 dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 text-text-dark dark:text-white focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
                 />
               </div>
@@ -81,6 +126,8 @@ export default function Contact() {
               </label>
               <textarea
                 id="message"
+                name="message"
+                required
                 rows={6}
                 className="w-full p-3 rounded-lg bg-gray-50 dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 text-text-dark dark:text-white focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
               ></textarea>
@@ -88,14 +135,25 @@ export default function Contact() {
             <div className="mt-8 text-left">
               <button
                 type="submit"
-                className="px-8 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-400/80 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                disabled={isSubmitting}
+                className="px-8 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-400/80 transition-all duration-300 hover:-translate-y-1 cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed disabled:hover:-translate-y-0"
               >
-                Enviar mensagem
+                {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
               </button>
             </div>
+            {submitMessage && (
+              <p
+                className={`mt-4 text-left text-sm ${
+                  submitMessage.includes('sucesso')
+                    ? 'text-green-500'
+                    : 'text-red-500'
+                }`}
+              >
+                {submitMessage}
+              </p>
+            )}
           </form>
 
-          {/* Coluna de Informações e Redes Sociais */}
           <div className="lg:col-span-2 lg:pl-8">
             <div className="space-y-6 text-text-dark dark:text-gray-300">
               <div className="flex items-center gap-4">
@@ -127,7 +185,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Ícones Sociais */}
             <div className="flex justify-start gap-4 mt-8">
               <a
                 href="https://github.com/jotalucasfarias"
