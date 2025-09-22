@@ -1,4 +1,4 @@
-import { FiArrowLeft, FiArrowRight, FiExternalLink } from 'react-icons/fi';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { useInView } from 'react-intersection-observer';
 import { projectsData } from '../../data/projectsData';
 
@@ -71,14 +71,19 @@ export default function Projects() {
                   <h3 className="text-xl font-bold text-text-dark dark:text-white">
                     {project.title}
                   </h3>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Ver ${project.title} no GitHub`}
-                  >
-                    <FiExternalLink className="text-gray-400 group-hover:text-yellow-500 transition-colors" />
-                  </a>
+                  <div className="flex items-center gap-4">
+                    {project.deploy && (
+                      <a
+                        href={project.deploy}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Ver o deploy de ${project.title}`}
+                        className="text-sm text-gray-400 group-hover:text-yellow-500 transition-colors hover:underline"
+                      >
+                        Ver projeto
+                      </a>
+                    )}
+                  </div>
                 </div>
                 <p className="text-text-dark/80 dark:text-gray-400 mb-6 flex-grow">
                   {project.description}
