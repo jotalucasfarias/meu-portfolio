@@ -5,13 +5,15 @@ export const projectsData = [
       'Desenvolvimento de um site responsivo com sistema de agendamento de consultas, painel administrativo e design moderno.',
     tags: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Firebase'],
     url: 'https://github.com/jotalucasfarias/projeto-magna-odonto',
+    deploy: 'https://magna-odonto-demo.vercel.app/',
   },
   {
-    title: 'Primeflix',
+    title: 'CinePosters',
     description:
       'Um site moderno e responsivo feito com React para explorar uma lista de filmes que estão em cartaz no momento. Cada filme é apresentado em um card, com a opção de ver detalhes, salvar nos favoritos e assistir ao trailer.',
     tags: ['JavaScript', 'React', 'API', 'CSS'],
-    url: 'https://github.com/jotalucasfarias/primeflix',
+    url: 'https://github.com/jotalucasfarias/CinePosters',
+    deploy: 'https://cineposters.netlify.app/',
   },
   {
     title: 'Todo List com Autenticação',
@@ -19,6 +21,7 @@ export const projectsData = [
       'Um aplicativo de lista de tarefas que inclui um sistema de autenticação de usuários, permitindo que cada pessoa gerencie suas próprias tarefas de forma privada.',
     tags: ['JavaScript', 'React', 'Firebase', 'Autenticação', 'CSS'],
     url: 'https://github.com/jotalucasfarias/todo-app-auth',
+    deploy: 'https://todo-app-auth-ten.vercel.app/',
   },
   {
     title: 'Portfólio Pessoal',

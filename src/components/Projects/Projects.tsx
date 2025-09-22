@@ -62,11 +62,11 @@ export default function Projects() {
               slidesPerView: 3,
             },
           }}
-          className="!pb-12 !px-4 !py-4" // Adiciona padding para o hover e paginação
+          className="!pb-12 !px-4 !py-6"
         >
           {projectsData.map((project, index) => (
             <SwiperSlide key={index} className="h-auto">
-              <div className="group bg-white dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 rounded-xl p-6 flex flex-col h-full transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_40px_5px_rgba(234,179,8,0.2)] dark:hover:border-yellow-500/40">
+              <div className="group bg-white dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 rounded-xl p-6 flex flex-col h-66 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_25px_5px_rgba(234,179,8,0.2)] dark:hover:border-yellow-500/40">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-bold text-text-dark dark:text-white">
                     {project.title}
