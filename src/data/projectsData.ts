@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    title: 'Site para uma Clínica Odontológica (TCC)',
+    title: 'Site para uma Clínica Odontológica',
     description:
       'Desenvolvimento de um site responsivo com sistema de agendamento de consultas, painel administrativo e design moderno.',
     tags: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Firebase'],
@@ -9,7 +9,7 @@ export const projectsData = [
   {
     title: 'Primeflix',
     description:
-      'Um site moderno e responsivo construído com React para explorar uma lista de filmes que estão em cartaz no momento. Cada filme é apresentado em um card interativo, com a opção de ver detalhes, salvar nos favoritos e assistir ao trailer.',
+      'Um site moderno e responsivo feito com React para explorar uma lista de filmes que estão em cartaz no momento. Cada filme é apresentado em um card, com a opção de ver detalhes, salvar nos favoritos e assistir ao trailer.',
     tags: ['JavaScript', 'React', 'API', 'CSS'],
     url: 'https://github.com/jotalucasfarias/primeflix',
   },

@@ -10,36 +10,6 @@
   --color-text-dark: #2b221d;
 }
 
-/* @media (min-width: 768px) {
-  @theme {
-    --animate-infinite-scroll: infinite-scroll 25s linear infinite;
-  }
-}
-
-@media (max-width: 768px) {
-  @theme {
-    --animate-infinite-scroll: infinite-scroll2 40s linear infinite;
-  }
-}
-
-@keyframes infinite-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes infinite-scroll2 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-500%);
-  }
-} */
-
 /* Estilos Customizados para o Swiper Pagination */
 .swiper-pagination-custom .swiper-pagination-bullet {
   background-color: #9ca3af; /* Cor cinza para os inativos */
