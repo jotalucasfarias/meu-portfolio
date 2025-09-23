@@ -62,7 +62,7 @@ export default function Contact() {
       ref={ref}
       className="py-16 md:py-24 bg-[#FCFBF8] dark:bg-[#0a0a0a] transition-colors duration-500"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
         <div
           className={`text-left transition-all duration-700 ease-out ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'

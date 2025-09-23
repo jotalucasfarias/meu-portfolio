@@ -7,15 +7,17 @@ import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 export default function App() {
   return (
-    <div className="bg-[#FCFBF8] dark:bg-[#0a0a0a] transition-colors duration-500">
+    <div className=" bg-[#FCFBF8] dark:bg-[#0a0a0a] transition-colors duration-500">
       <Header />
-      <main>
-        <HeroBanner />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-24">
+        <main>
+          <HeroBanner />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
       <Footer />
     </div>
   );

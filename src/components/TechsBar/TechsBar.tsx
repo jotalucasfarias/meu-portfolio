@@ -51,7 +51,7 @@ const TechCard = ({ icon, name }: { icon: React.ReactNode; name: string }) => {
 
 export default function TechsBar() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <section className="mt-10">
       <div className="relative flex flex-col items-center justify-center overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((tech) => (

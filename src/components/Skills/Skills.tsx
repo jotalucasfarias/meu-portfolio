@@ -35,7 +35,7 @@ export default function Skills() {
 
   return (
     <section id="skills" ref={ref} className="py-16 md:py-24 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
         {/* Título */}
         <div
           className={`max-w-3xl transition-all duration-700 ease-out ${

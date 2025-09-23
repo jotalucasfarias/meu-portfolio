@@ -10,7 +10,7 @@ export default function Sobre() {
   return (
     <section id="about" ref={ref} className="py-16 md:py-24 overflow-hidden">
       {/* A classe max-w-6xl foi removida para seguir o padrão do site */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
         {/* Conteúdo em duas colunas */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Coluna 1: Sobre mim */}

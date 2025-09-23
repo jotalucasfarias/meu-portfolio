@@ -5,7 +5,7 @@ import ThemeButton from './ThemeButton';
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-white/20 bg-[#FCFBF8]/80 dark:bg-[#0a0a0a]/80 backdrop-blur-lg transition-colors duration-500">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-24 flex items-center justify-between h-16">
         {/* Name/Logo */}
         <div className="flex items-center gap-2">
           {/* Yellow circle */}

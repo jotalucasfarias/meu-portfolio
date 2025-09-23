@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    title: 'Site para uma Clínica Odontológica',
+    title: 'Clínica Magna Odonto',
     description:
       'Desenvolvimento de um site responsivo com sistema de agendamento de consultas, painel administrativo e design moderno.',
     tags: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Firebase'],
@@ -9,14 +9,14 @@ export const projectsData = [
   {
     title: 'CinePosters',
     description:
-      'Um site moderno e responsivo feito com React para explorar uma lista de filmes que estão em cartaz no momento. Cada filme é apresentado em um card, com a opção de ver detalhes, salvar nos favoritos e assistir ao trailer.',
+      'Um site responsivo feito com React para explorar uma lista de filmes que estão em cartaz no momento. Cada filme é apresentado em um card, com a opção de ver detalhes, salvar nos favoritos e assistir ao trailer.',
     tags: ['JavaScript', 'React', 'API', 'CSS'],
     deploy: 'https://cineposters.netlify.app/',
   },
   {
     title: 'Todo List com Autenticação',
     description:
-      'Um aplicativo de lista de tarefas que inclui um sistema de autenticação de usuários, permitindo que cada pessoa gerencie suas próprias tarefas de forma privada.',
+      'Aplicativo de lista de tarefas que inclui um sistema de autenticação de usuários, permitindo que cada pessoa gerencie suas próprias tarefas.',
     tags: ['JavaScript', 'React', 'Firebase', 'Autenticação', 'CSS'],
     deploy: 'https://todo-app-auth-ten.vercel.app/',
   },

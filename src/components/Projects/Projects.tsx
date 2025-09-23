@@ -21,7 +21,7 @@ export default function Projects() {
       ref={ref}
       className="py-16 md:py-24 bg-[#FCFBF8] dark:bg-[#0a0a0a] transition-colors duration-500"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
         {/* Cabeçalho da Seção */}
         <div
           className={`flex flex-col md:flex-row justify-between md:items-center mb-12 transition-all duration-700 ease-out ${
