@@ -42,7 +42,7 @@ export default function MenuButton() {
       <button
         onClick={toggleMenu}
         aria-label="Abrir menu"
-        className="p-3 rounded duration-300 border border-gray-200 hover:bg-yellow-500/25 hover:text-black dark:border-white/20 transition-colors z-[60]"
+        className="p-2 rounded duration-300 border border-gray-200 hover:bg-yellow-500/25 hover:text-black dark:border-white/20 transition-colors z-[60]"
       >
         <div className="relative h-5 w-5">
           <FiMenu

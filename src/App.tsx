@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className=" bg-[#FCFBF8] dark:bg-[#0a0a0a] transition-colors duration-500">
       <Header />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-24">
+
         <main>
           <HeroBanner />
           <About />
@@ -17,7 +17,6 @@ export default function App() {
           <Projects />
           <Contact />
         </main>
-      </div>
       <Footer />
     </div>
   );

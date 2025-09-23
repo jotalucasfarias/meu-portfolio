@@ -10,12 +10,8 @@ export default function Sobre() {
 
   return (
     // Fundo customizado para o About
-    <section
-      id="about"
-      ref={ref}
-      className="py-16 md:py-24 overflow-hidden "
-    >
-      <div>
+    <section id="about" ref={ref} className="py-16 md:py-24 overflow-hidden ">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-24">
         {/* Grid de duas colunas */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Coluna 1: Sobre mim */}
