@@ -36,7 +36,7 @@ const TechCard = ({ icon, name }: { icon: React.ReactNode; name: string }) => {
       className={cn(
         'relative flex flex-col h-full w-48 cursor-pointer items-center justify-center gap-4 overflow-hidden rounded-xl border p-4',
         'bg-[#FCFBF8] dark:bg-[#0a0a0a] border-gray-400 dark:border-white/20',
-        'transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_40px_5px_rgba(249,192,21,0.2)] dark:hover:border-[#F9C015]/40',
+        'transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_20px_5px_rgba(249,192,21,0.2)] dark:hover:border-[#F9C015]/40',
       )}
     >
       <div className="text-3xl text-[#625750] dark:text-[#C6C3B9]">{icon}</div>

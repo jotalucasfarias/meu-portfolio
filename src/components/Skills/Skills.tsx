@@ -49,11 +49,12 @@ export default function Skills() {
         </div>
 
         {/* Grid de Habilidades */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
           {skillsData.map((skill, index) => (
             <div
               key={index}
-              className={`bg-[#FCFBF8] dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/20 rounded-lg p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_40px_5px_rgba(249,192,21,0.2)] dark:hover:border-[#F9C015]/40 ${
+              className={`bg-[#FCFBF8] dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/20 rounded-lg p-6 transition-all duration-300 ease-out ${
                 inView
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-10'

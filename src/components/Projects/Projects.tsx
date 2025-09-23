@@ -19,7 +19,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className="min-h-screen py-24 md:py-32 bg-[#FCFBF8] dark:bg-[#0a0a0a] transition-colors duration-700"
+      className="min-h-screen py-24 md:py-32 transition-colors duration-700"
     >
       <div>
         {/* Cabeçalho da Seção */}
@@ -66,7 +66,7 @@ export default function Projects() {
         >
           {projectsData.map((project, index) => (
             <SwiperSlide key={index} className="h-auto">
-              <div className="group bg-[#FCFBF8] dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/20 rounded-xl p-6 flex flex-col min-h-66 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_25px_5px_rgba(249,192,21,0.2)] dark:hover:border-[#F9C015]/40">
+              <div className="group border border-gray-200 dark:border-white/20 rounded-xl p-6 flex flex-col min-h-66 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_25px_5px_rgba(249,192,21,0.2)] dark:hover:border-[#F9C015]/40">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-bold text-[#2B221D] dark:text-[#F6F5EE]">
                     {project.title}
