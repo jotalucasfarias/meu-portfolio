@@ -12,7 +12,7 @@ export default function HeroBanner() {
     <section
       id="home"
       ref={ref}
-      className="min-h-[calc(90vh-16px)] flex items-center justify-center py-24 md:py-32 transition-colors duration-700"
+      className=" flex items-center justify-center py-24 md:py-32 transition-colors duration-700"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-24 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center">
@@ -91,6 +91,7 @@ export default function HeroBanner() {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
