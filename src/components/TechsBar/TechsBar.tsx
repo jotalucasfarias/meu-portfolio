@@ -1,13 +1,12 @@
 import { cn } from '@/lib/utils';
 import {
   SiCss3,
-  SiExpress,
   SiFigma,
   SiGit,
+  SiGithub,
   SiHtml5,
   SiJavascript,
   SiNextdotjs,
-  SiNodedotjs,
   SiPostgresql,
   SiReact,
   SiTailwindcss,
@@ -23,53 +22,13 @@ const technologies = [
   { name: 'React.js', icon: <SiReact /> },
   { name: 'Next.js', icon: <SiNextdotjs /> },
   { name: 'TailwindCSS', icon: <SiTailwindcss /> },
-  { name: 'Node.js', icon: <SiNodedotjs /> },
-  { name: 'Express.js', icon: <SiExpress /> },
   { name: 'PostgreSQL', icon: <SiPostgresql /> },
   { name: 'Git', icon: <SiGit /> },
+  { name: 'GitHub', icon: <SiGithub /> },
   { name: 'Figma', icon: <SiFigma /> },
 ];
 
-// const technologies = [
-//   {
-//     name: 'Jack',
-//     username: '@jack',
-//     body: "I've never seen anything like this before. It's amazing. I love it.",
-//     img: 'https://avatar.vercel.sh/jack',
-//   },
-//   {
-//     name: 'Jill',
-//     username: '@jill',
-//     body: "I don't know what to say. I'm speechless. This is amazing.",
-//     img: 'https://avatar.vercel.sh/jill',
-//   },
-//   {
-//     name: 'John',
-//     username: '@john',
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: 'https://avatar.vercel.sh/john',
-//   },
-//   {
-//     name: 'Jane',
-//     username: '@jane',
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: 'https://avatar.vercel.sh/jane',
-//   },
-//   {
-//     name: 'Jenny',
-//     username: '@jenny',
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: 'https://avatar.vercel.sh/jenny',
-//   },
-//   {
-//     name: 'James',
-//     username: '@james',
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: 'https://avatar.vercel.sh/james',
-//   },
-// ];
-
-const firstRow = technologies.slice(0, technologies.length / 2);
+const firstRow = technologies.slice(0, technologies.length);
 
 const TechCard = ({ icon, name }: { icon: React.ReactNode; name: string }) => {
   return (

@@ -1,11 +1,11 @@
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiGithub, FiLinkedin } from 'react-icons/fi'; // Usando os mesmos ícones do Contact
 import { useInView } from 'react-intersection-observer';
 import { Link as ScrollLink } from 'react-scroll';
 
 export default function HeroBanner() {
   const { ref, inView } = useInView({
-    triggerOnce: true, // A animação acontece apenas uma vez
-    threshold: 0.1, // A animação começa quando 10% do elemento está visível
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
   return (
@@ -18,39 +18,54 @@ export default function HeroBanner() {
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
-            <h1
-              className="text-4xl md:text-5xl font-bold text-text-dark
- dark:text-white leading-tight"
-            >
-              Olá, sou <span className="text-yellow-400">João Lucas</span> —{' '}
-              Desenvolvedor Front-end & Profissional de TI
+            {/* Título principal */}
+            <h1 className="text-4xl md:text-5xl font-bold text-text-dark dark:text-white leading-tight">
+              Olá, sou <span className="text-yellow-400">João Lucas</span> —
+              Desenvolvedor Front-end com experiência em TI
             </h1>
 
-            <p className="text-lg text-text-dark/80 dark:text-gray-300">
-              Apaixonado por tecnologia e desenvolvimento web, crio interfaces
-              modernas, acessíveis e intuitivas. Com base sólida em suporte
-              técnico e infraestrutura de TI, aplico meus conhecimentos para
-              entregar soluções práticas e performáticas, sempre focado em
-              experiência do usuário e qualidade de código.
-            </p>
+            {/* Ícones das redes sociais - iguais ao Contact */}
+            <div className="flex gap-4 mt-2 justify-center md:justify-start">
+              <a
+                href="https://github.com/jotalucasfarias"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 text-text-dark dark:text-white border border-gray-200 dark:border-white/20 rounded-full transition-all duration-300 hover:text-yellow-500 hover:border-yellow-500 hover:-translate-y-1"
+                aria-label="GitHub"
+              >
+                <FiGithub size={24} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jottalucasfarias/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 text-text-dark dark:text-white border border-gray-200 dark:border-white/20 rounded-full transition-all duration-300 hover:text-yellow-500 hover:border-yellow-500 hover:-translate-y-1"
+                aria-label="LinkedIn"
+              >
+                <FiLinkedin size={24} />
+              </a>
+            </div>
 
-            <div className="flex flex-row gap-4 mt-4 justify-start">
+            {/* Botões principais */}
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-4 justify-start items-stretch">
+              {/* Botão Ver projetos */}
               <ScrollLink
                 to="projects"
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className="px-6 py-3 flex items-center justify-center gap-2 bg-yellow-400 text-black  rounded-lg hover:bg-yellow-400/75 transition-all duration-300 text-center hover:-translate-y-1 flex-1 whitespace-nowrap cursor-pointer"
+                className="px-6 py-3 flex items-center justify-center gap-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-400/75 transition-all duration-300 text-center hover:-translate-y-1 whitespace-nowrap cursor-pointer"
               >
                 Ver projetos
                 <FiArrowRight />
               </ScrollLink>
+              {/* Botão Entrar em contato */}
               <ScrollLink
                 to="contact"
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className="px-6 py-3 border border-yellow-500 text-text-dark dark:text-white font-bold rounded-lg hover:bg-yellow-500/10 transition-all duration-300 text-center hover:-translate-y-1 flex-1 whitespace-nowrap cursor-pointer"
+                className="px-6 py-3 border border-yellow-500 text-text-dark dark:text-white font-bold rounded-lg hover:bg-yellow-500/10 transition-all duration-300 text-center hover:-translate-y-1 whitespace-nowrap cursor-pointer"
               >
                 Entrar em contato
               </ScrollLink>
