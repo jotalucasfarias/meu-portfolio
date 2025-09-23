@@ -187,7 +187,7 @@ export default function Contact() {
                   href="https://github.com/jotalucasfarias"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 text-[#625750] dark:text-[#C6C3B9] border border-gray-200 dark:border-white/20 rounded-full transition-all duration-300 hover:text-[#F9C015] hover:border-[#F9C015] hover:-translate-y-1"
+                  className="p-3 text-[#625750] dark:text-[#C6C3B9] border border-gray-400 dark:border-white/20 rounded-full transition-all duration-300 hover:text-[#F9C015] hover:border-[#F9C015] hover:-translate-y-1"
                   aria-label="GitHub"
                 >
                   <FiGithub size={24} />
@@ -196,7 +196,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/jottalucasfarias/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 text-[#625750] dark:text-[#C6C3B9] border border-gray-200 dark:border-white/20 rounded-full transition-all duration-300 hover:text-[#F9C015] hover:border-[#F9C015] hover:-translate-y-1"
+                  className="p-3 text-[#625750] dark:text-[#C6C3B9] border border-gray-400 dark:border-white/20 rounded-full transition-all duration-300 hover:text-[#F9C015] hover:border-[#F9C015] hover:-translate-y-1"
                   aria-label="LinkedIn"
                 >
                   <FiLinkedin size={24} />
