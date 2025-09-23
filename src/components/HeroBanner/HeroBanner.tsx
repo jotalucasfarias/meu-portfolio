@@ -19,9 +19,9 @@ export default function HeroBanner() {
             }`}
           >
             {/* Título principal */}
-            <h1 className="text-4xl md:text-5xl font-bold text-[#2B221D] dark:text-[#F6F5EE] leading-tight">
+            <h1 className="text-4xl md:text-5xl/12 tracking-tight font-extrabold text-[#2B221D] dark:text-[#F6F5EE] leading-tight">
               Olá, sou <span className="text-[#F9C015]">João Lucas</span> —
-              Desenvolvedor Front-end com experiência em TI
+              Desenvolvedor Front-End & Profissional de TI
             </h1>
 
             {/* Ícones das redes sociais - iguais ao Contact */}
@@ -82,10 +82,8 @@ export default function HeroBanner() {
               <img
                 src="photo.jpeg"
                 alt="Foto de João Lucas"
-                className="rounded-full object-cover w-full h-full border-2 border-yellow-500"
-                style={{
-                  boxShadow: '0 0 40px 5px rgba(234, 179, 8, 0.4)', // Sombra amarela
-                }}
+                className="rounded-full object-cover w-full h-full border-2 border-yellow-500 shadow-[0_0_40px_5px_rgba(234,179,8,0.4)]"
+                
               />
             </div>
           </div>

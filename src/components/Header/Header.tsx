@@ -4,17 +4,17 @@ import ThemeButton from './ThemeButton';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-white/20 bg-[#FCFBF8]/80 dark:bg-[#0a0a0a]/80 backdrop-blur-lg transition-colors duration-500">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-white/10 bg-[#FCFBF8]/80 dark:bg-[#0a0a0a]/80 backdrop-blur-lg transition-colors duration-500">
       <div className="container mx-auto px-4 sm:px-6 lg:px-24 flex items-center justify-between h-16">
         {/* Name/Logo */}
         <div className="flex items-center gap-2">
           {/* Yellow circle */}
-          <div className="w-3 h-3 bg-[#F9C015] rounded-full animate-pulse"></div>
+          <div className="w-3 h-3 bg-[#F9C015] shadow-[0_0_10px_3px_rgba(234,179,8,0.4)] rounded-full animate-pulse"></div>
           <ScrollLink
             to="home"
             smooth={true}
             duration={500}
-            className="text-xl font-extrabold text-[#2B221D] dark:text-[#F6F5EE] cursor-pointer"
+            className="text-lg font-extrabold tracking-tight text-[#2B221D] dark:text-[#F6F5EE] cursor-pointer"
           >
             João Lucas
           </ScrollLink>
