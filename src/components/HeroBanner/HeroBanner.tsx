@@ -9,12 +9,16 @@ export default function HeroBanner() {
   });
 
   return (
-    <section id="home" ref={ref} className="py-16 md:py-24 overflow-hidden">
-      <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section
+      id="home"
+      ref={ref}
+      className="min-h-screen flex items-center justify-center py-24 md:py-32 transition-colors duration-700"
+    >
+      <div className="w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center">
           {/* Coluna da Esquerda: Texto e Botões */}
           <div
-            className={`flex flex-col gap-6 text-left order-2 md:order-1 transition-all duration-700 ease-out delay-500 ${
+            className={`flex flex-col gap-8 text-center md:text-left order-2 md:order-1 transition-all duration-700 ease-out delay-500 ${
               inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
@@ -25,7 +29,7 @@ export default function HeroBanner() {
             </h1>
 
             {/* Ícones das redes sociais - iguais ao Contact */}
-            <div className="flex gap-4 mt-2 justify-center md:justify-start">
+            <div className="flex gap-6 mt-4 justify-center md:justify-start">
               <a
                 href="https://github.com/jotalucasfarias"
                 target="_blank"
@@ -47,7 +51,7 @@ export default function HeroBanner() {
             </div>
 
             {/* Botões principais */}
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-4 justify-start items-stretch">
+            <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start items-stretch">
               {/* Botão Ver projetos */}
               <ScrollLink
                 to="projects"
@@ -83,7 +87,6 @@ export default function HeroBanner() {
                 src="photo.jpeg"
                 alt="Foto de João Lucas"
                 className="rounded-full object-cover w-full h-full border-2 border-yellow-500 shadow-[0_0_40px_5px_rgba(234,179,8,0.4)]"
-                
               />
             </div>
           </div>

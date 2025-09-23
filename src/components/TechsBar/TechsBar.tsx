@@ -12,7 +12,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
-import { Marquee } from '../ui/marquee';
+import { Marquee } from '../ui/Marquee';
 
 const technologies = [
   { name: 'HTML5', icon: <SiHtml5 /> },

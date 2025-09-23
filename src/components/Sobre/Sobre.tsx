@@ -8,8 +8,11 @@ export default function Sobre() {
   });
 
   return (
-    <section id="about" ref={ref} className="py-16 md:py-24 overflow-hidden">
-      {/* A classe max-w-6xl foi removida para seguir o padrão do site */}
+    <section
+      id="about"
+      ref={ref}
+      className="min-h-screen py-24 md:py-32 overflow-hidden transition-colors duration-700"
+    >
       <div>
         {/* Conteúdo em duas colunas */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">

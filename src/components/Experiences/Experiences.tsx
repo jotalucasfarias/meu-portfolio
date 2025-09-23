@@ -12,7 +12,7 @@ import {
 
 export default function Experiences() {
   return (
-    <div className="bg-[#FCFBF8] dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/20 rounded-lg p-6 h-full transition-colors duration-500">
+    <div className="border border-gray-200 dark:border-white/20 rounded-lg p-6 h-full min-h-[60vh] transition-colors duration-700">
       <div className="flex items-start justify-between gap-4 mb-2 ">
         <div>
           <h4 className="text-lg xl:text-xl font-bold text-[#2B221D] dark:text-[#F6F5EE]">
