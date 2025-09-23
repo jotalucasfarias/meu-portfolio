@@ -19,7 +19,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className="py-16 md:py-24 bg-white dark:bg-black transition-colors duration-500"
+      className="py-16 md:py-24 bg-[#FCFBF8] dark:bg-[#0a0a0a] transition-colors duration-500"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho da Seção */}
@@ -29,16 +29,16 @@ export default function Projects() {
           }`}
         >
           <div className="text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-text-dark dark:text-white">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#2B221D] dark:text-[#F6F5EE]">
               Projetos
             </h2>
-            <div className="w-16 h-1 bg-yellow-500 mt-3"></div>
+            <div className="w-16 h-1 bg-[#F9C015] mt-3"></div>
           </div>
           <div className="flex items-center gap-4 mt-6 md:mt-0">
-            <div className="swiper-button-prev-custom p-3 rounded-full border border-gray-300 dark:border-white/20 text-text-dark dark:text-white hover:bg-yellow-500/10 hover:border-yellow-500/50 cursor-pointer transition-colors">
+            <div className="swiper-button-prev-custom p-3 rounded-full border border-gray-300 dark:border-white/20 text-[#625750] dark:text-[#C6C3B9] hover:bg-[#F9C015]/10 hover:border-[#F9C015]/50 cursor-pointer transition-colors">
               <FiArrowLeft />
             </div>
-            <div className="swiper-button-next-custom p-3 rounded-full border border-gray-300 dark:border-white/20 text-text-dark dark:text-white hover:bg-yellow-500/10 hover:border-yellow-500/50 cursor-pointer transition-colors">
+            <div className="swiper-button-next-custom p-3 rounded-full border border-gray-300 dark:border-white/20 text-[#625750] dark:text-[#C6C3B9] hover:bg-[#F9C015]/10 hover:border-[#F9C015]/50 cursor-pointer transition-colors">
               <FiArrowRight />
             </div>
           </div>
@@ -66,9 +66,9 @@ export default function Projects() {
         >
           {projectsData.map((project, index) => (
             <SwiperSlide key={index} className="h-auto">
-              <div className="group bg-white dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 rounded-xl p-6 flex flex-col min-h-66 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_25px_5px_rgba(234,179,8,0.2)] dark:hover:border-yellow-500/40">
+              <div className="group bg-[#FCFBF8] dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/20 rounded-xl p-6 flex flex-col min-h-66 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_0_25px_5px_rgba(249,192,21,0.2)] dark:hover:border-[#F9C015]/40">
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-bold text-text-dark dark:text-white">
+                  <h3 className="text-xl font-bold text-[#2B221D] dark:text-[#F6F5EE]">
                     {project.title}
                   </h3>
                   <div className="flex items-center gap-4">
@@ -78,21 +78,21 @@ export default function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`Ver o deploy de ${project.title}`}
-                        className="text-sm text-gray-400 group-hover:text-yellow-500 transition-colors hover:underline"
+                        className="text-sm text-[#625750] dark:text-[#C6C3B9] group-hover:text-[#F9C015] transition-colors hover:underline"
                       >
                         Ver projeto
                       </a>
                     )}
                   </div>
                 </div>
-                <p className="text-text-dark/80 dark:text-gray-400 mb-6 flex-grow">
+                <p className="text-[#625750]/80 dark:text-[#C6C3B9] mb-6 flex-grow">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-transparent border border-gray-300 dark:border-white/20 text-text-dark/80 dark:text-gray-300 text-sm rounded-full transition-colors duration-300 group-hover:border-yellow-500/50"
+                      className="px-3 py-1 bg-transparent border border-gray-300 dark:border-white/20 text-[#625750]/80 dark:text-[#C6C3B9] text-sm rounded-full transition-colors duration-300 group-hover:border-[#F9C015]/50"
                     >
                       {tag}
                     </span>

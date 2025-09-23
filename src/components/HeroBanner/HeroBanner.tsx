@@ -19,8 +19,8 @@ export default function HeroBanner() {
             }`}
           >
             {/* Título principal */}
-            <h1 className="text-4xl md:text-5xl font-bold text-text-dark dark:text-white leading-tight">
-              Olá, sou <span className="text-yellow-400">João Lucas</span> —
+            <h1 className="text-4xl md:text-5xl font-bold text-[#2B221D] dark:text-[#F6F5EE] leading-tight">
+              Olá, sou <span className="text-[#F9C015]">João Lucas</span> —
               Desenvolvedor Front-end com experiência em TI
             </h1>
 
@@ -30,7 +30,7 @@ export default function HeroBanner() {
                 href="https://github.com/jotalucasfarias"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 text-text-dark dark:text-white border border-gray-200 dark:border-white/20 rounded-full transition-all duration-300 hover:text-yellow-500 hover:border-yellow-500 hover:-translate-y-1"
+                className="p-3 text-[#625750] dark:text-[#C6C3B9] border border-gray-200 dark:border-white/20 rounded-full transition-all duration-300 hover:text-[#F9C015] hover:border-[#F9C015] hover:-translate-y-1"
                 aria-label="GitHub"
               >
                 <FiGithub size={24} />
@@ -39,7 +39,7 @@ export default function HeroBanner() {
                 href="https://www.linkedin.com/in/jottalucasfarias/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 text-text-dark dark:text-white border border-gray-200 dark:border-white/20 rounded-full transition-all duration-300 hover:text-yellow-500 hover:border-yellow-500 hover:-translate-y-1"
+                className="p-3 text-[#625750] dark:text-[#C6C3B9] border border-gray-200 dark:border-white/20 rounded-full transition-all duration-300 hover:text-[#F9C015] hover:border-[#F9C015] hover:-translate-y-1"
                 aria-label="LinkedIn"
               >
                 <FiLinkedin size={24} />
@@ -65,7 +65,7 @@ export default function HeroBanner() {
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className="px-6 py-3 border border-yellow-500 text-text-dark dark:text-white font-bold rounded-lg hover:bg-yellow-500/10 transition-all duration-300 text-center hover:-translate-y-1 whitespace-nowrap cursor-pointer"
+                className="px-6 py-3 border border-[#F9C015] text-[#625750] dark:text-[#C6C3B9] font-bold rounded-lg hover:bg-[#F9C015]/10 transition-all duration-300 text-center hover:-translate-y-1 whitespace-nowrap cursor-pointer"
               >
                 Entrar em contato
               </ScrollLink>

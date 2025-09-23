@@ -3,13 +3,6 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-@theme {
-  --color-primary: #f9c015;
-  --color-background: #000000;
-  --color-text: #ffffff;
-  --color-text-dark: #2b221d;
-}
-
 /* Estilos Customizados para o Swiper Pagination */
 .swiper-pagination-custom .swiper-pagination-bullet {
   background-color: #9ca3af; /* Cor cinza para os inativos */

@@ -2,15 +2,21 @@ import { useInView } from 'react-intersection-observer';
 import Experiences from '../Experiences/Experiences';
 
 export default function Sobre() {
+  // Utiliza o hook para animação ao entrar na tela
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
   return (
-    <section id="about" ref={ref} className="py-16 md:py-24 overflow-hidden">
+    // Fundo customizado para o About
+    <section
+      id="about"
+      ref={ref}
+      className="py-16 md:py-24 overflow-hidden bg-[#FCFBF8] dark:bg-[#0a0a0a]"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Conteúdo em duas colunas */}
+        {/* Grid de duas colunas */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Coluna 1: Sobre mim */}
           <div
@@ -18,19 +24,22 @@ export default function Sobre() {
               inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-text-dark dark:text-white">
+            {/* Título com cor personalizada para cada tema */}
+            <h2 className="text-2xl md:text-3xl font-bold text-[#2B221D] dark:text-[#F6F5EE]">
               Quem sou eu?
             </h2>
-            <div className="w-16 h-1 bg-yellow-500 mt-3 mb-8"></div>
+            {/* Barra amarela personalizada */}
+            <div className="w-16 h-1 bg-[#F9C015] mt-3 mb-8"></div>
 
-            <p className="text-base xl:text-lg text-text-dark/90 dark:text-gray-300 text-justify mb-4">
+            {/* Texto com cor personalizada para cada tema */}
+            <p className="text-base xl:text-lg text-[#625750] dark:text-[#C6C3B9] text-justify mb-4">
               Olá, sou{' '}
               <strong>João Lucas Farias — Desenvolvedor Front-end</strong>{' '}
               apaixonado por criar interfaces modernas, acessíveis e intuitivas,
               que tornam a experiência do usuário simples e agradável.
             </p>
 
-            <p className="text-base xl:text-lg text-text-dark/90 dark:text-gray-300 text-justify mb-4">
+            <p className="text-base xl:text-lg text-[#625750] dark:text-[#C6C3B9] text-justify mb-4">
               Hoje, estou em busca da{' '}
               <strong>
                 minha primeira oportunidade profissional como desenvolvedor
@@ -43,7 +52,7 @@ export default function Sobre() {
               soluções úteis no dia a dia.
             </p>
 
-            <p className="text-base xl:text-lg text-text-dark/90 dark:text-gray-300 text-justify mb-4">
+            <p className="text-base xl:text-lg text-[#625750] dark:text-[#C6C3B9] text-justify mb-4">
               Além do código, gosto de explorar ferramentas de design como o{' '}
               <strong>Figma</strong> para prototipar interfaces e acompanhar
               tendências de front-end, sempre buscando unir estética,
@@ -51,7 +60,7 @@ export default function Sobre() {
             </p>
 
             <div className="mb-4">
-              <p className="text-base xl:text-lg text-text-dark/90 dark:text-gray-300 text-justify">
+              <p className="text-base xl:text-lg text-[#625750] dark:text-[#C6C3B9] text-justify">
                 <span className="font-semibold">
                   🚀 Principais habilidades:
                 </span>{' '}
@@ -61,7 +70,7 @@ export default function Sobre() {
             </div>
 
             <div>
-              <p className="text-base xl:text-lg text-text-dark/90 dark:text-gray-300 text-justify">
+              <p className="text-base xl:text-lg text-[#625750] dark:text-[#C6C3B9] text-justify">
                 🌟 <span className="font-semibold">Objetivo:</span> Criar
                 experiências digitais que sejam funcionais, acessíveis e que
                 realmente façam diferença para os usuários, aplicando meus
@@ -76,10 +85,12 @@ export default function Sobre() {
               inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-text-dark dark:text-white">
+            {/* Título com cor personalizada */}
+            <h2 className="text-2xl md:text-3xl font-bold text-[#2B221D] dark:text-[#F6F5EE]">
               Experiência
             </h2>
-            <div className="w-16 h-1 bg-yellow-500 mt-3 mb-8"></div>
+            {/* Barra amarela personalizada */}
+            <div className="w-16 h-1 bg-[#F9C015] mt-3 mb-8"></div>
             <Experiences />
           </div>
         </div>

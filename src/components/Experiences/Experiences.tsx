@@ -12,17 +12,17 @@ import {
 
 export default function Experiences() {
   return (
-    <div className="bg-white dark:bg-[#0f0f0f85] border border-gray-200 dark:border-white/20 rounded-lg p-6 h-full">
+    <div className="bg-[#FCFBF8] dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/20 rounded-lg p-6 h-full">
       <div className="flex items-start justify-between gap-4 mb-2">
         <div>
-          <h4 className="text-lg xl:text-xl font-bold text-text-dark dark:text-white">
+          <h4 className="text-lg xl:text-xl font-bold text-[#2B221D] dark:text-[#F6F5EE]">
             Tribunal de Justiça de Rondônia (TJRO)
           </h4>
-          <p className="text-yellow-500 font-semibold text-sm xl:text-base">
+          <p className="text-[#F9C015] font-semibold text-sm xl:text-base">
             Suporte Técnico
           </p>
         </div>
-        <span className="flex items-center gap-2 text-sm xl:text-base text-gray-500 dark:text-gray-400 whitespace-nowrap">
+        <span className="flex items-center gap-2 text-sm xl:text-base text-[#625750] dark:text-[#C6C3B9] whitespace-nowrap">
           <FiCalendar aria-hidden />
           2022 a 2024
         </span>
@@ -38,17 +38,17 @@ export default function Experiences() {
       </div>
 
       {/* Atribuições */}
-      <ul className="space-y-2 text-sm xl:text-base text-text-dark/90 dark:text-gray-300 mb-5">
+      <ul className="space-y-2 text-sm xl:text-base text-[#625750] dark:text-[#C6C3B9] mb-5">
         <li className="flex items-start gap-2">
           <FiCheckCircle
-            className="mt-0.5 text-yellow-500 shrink-0"
+            className="mt-0.5 text-[#F9C015] shrink-0"
             aria-hidden
           />
           <span>Implementação e manutenção de sistemas computacionais.</span>
         </li>
         <li className="flex items-start gap-2">
           <FiCheckCircle
-            className="mt-0.5 text-yellow-500 shrink-0"
+            className="mt-0.5 text-[#F9C015] shrink-0"
             aria-hidden
           />
           <span>
@@ -57,7 +57,7 @@ export default function Experiences() {
         </li>
         <li className="flex items-start gap-2">
           <FiCheckCircle
-            className="mt-0.5 text-yellow-500 shrink-0"
+            className="mt-0.5 text-[#F9C015] shrink-0"
             aria-hidden
           />
           <span>
@@ -67,14 +67,14 @@ export default function Experiences() {
         </li>
         <li className="flex items-start gap-2">
           <FiCheckCircle
-            className="mt-0.5 text-yellow-500 shrink-0"
+            className="mt-0.5 text-[#F9C015] shrink-0"
             aria-hidden
           />
           <span>Manutenção preventiva e corretiva de hardware e software.</span>
         </li>
         <li className="flex items-start gap-2">
           <FiCheckCircle
-            className="mt-0.5 text-yellow-500 shrink-0"
+            className="mt-0.5 text-[#F9C015] shrink-0"
             aria-hidden
           />
           <span>
@@ -84,12 +84,12 @@ export default function Experiences() {
         </li>
         <li className="flex items-start gap-2">
           <FiCheckCircle
-            className="mt-0.5 text-yellow-500 shrink-0"
+            className="mt-0.5 text-[#F9C015] shrink-0"
             aria-hidden
           />
           <span>
             Projeto interno: criação de uma{' '}
-            <strong className="text-yellow-600 dark:text-yellow-400">
+            <strong className="text-[#F9C015] dark:text-[#F9C015]">
               ISO offline do Windows 11
             </strong>{' '}
             com instalação automática dos programas utilizados pelo TJRO.
