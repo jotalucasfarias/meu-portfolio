@@ -13,7 +13,7 @@ export default function HeroBanner() {
     <section
       id="home"
       ref={ref}
-      className="h-[calc(100vh-48px)] flex flex-col items-center justify-evenly py-24 md:py-16 transition-colors duration-700"
+      className="md:h-[calc(100vh-48px)] flex flex-col items-center justify-evenly py-24 md:py-16 transition-colors duration-700"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-24 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center">
@@ -69,7 +69,7 @@ export default function HeroBanner() {
                 smooth={true}
                 offset={-80}
                 duration={500}
-                className="px-6 py-3 border border-[#F9C015] text-[#625750] dark:text-[#C6C3B9] font-bold rounded-lg hover:bg-[#F9C015]/10 transition-all duration-300 text-center hover:-translate-y-1 whitespace-nowrap cursor-pointer"
+                className="px-6 py-3  border border-[#F9C015] text-[#625750] dark:text-[#C6C3B9] font-bold rounded-lg hover:bg-[#F9C015]/10 transition-all duration-300 text-center hover:-translate-y-1 whitespace-nowrap cursor-pointer"
               >
                 Entrar em contato
               </ScrollLink>
@@ -92,7 +92,9 @@ export default function HeroBanner() {
           </div>
         </div>
       </div>
-      <ScrollButtonDown nextSection="about" />
+      <div className="lg:block hidden">
+        <ScrollButtonDown nextSection="about" />
+      </div>
     </section>
   );
 }
