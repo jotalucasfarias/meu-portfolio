@@ -52,17 +52,16 @@ export default function HeroBanner() {
 
             {/* Botões principais */}
             <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start items-stretch">
-              {/* Botão Ver projetos */}
-              <ScrollLink
-                to="projects"
-                smooth={true}
-                offset={-80}
-                duration={500}
-                className="px-6 py-3 flex items-center justify-center gap-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-400/75 transition-all duration-300 text-center hover:-translate-y-1 whitespace-nowrap cursor-pointer"
+              {/* Botão Baixar Currículo */}
+              <a
+                href="/Curriculo_JoaoLucasFarias.pdf"
+                download
+                className="px-6 py-3 flex items-center justify-center gap-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-400/75 transition-all duration-300 text-center hover:-translate-y-1 whitespace-nowrap cursor-pointer font-bold"
+                aria-label="Baixar Currículo"
               >
-                Ver projetos
+                Baixar Currículo
                 <FiArrowRight />
-              </ScrollLink>
+              </a>
               {/* Botão Entrar em contato */}
               <ScrollLink
                 to="contact"
@@ -91,7 +90,6 @@ export default function HeroBanner() {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
