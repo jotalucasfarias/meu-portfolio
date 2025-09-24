@@ -49,6 +49,7 @@ export default function Projects() {
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}
           slidesPerView={1}
+          slidesPerGroup={3} // Avança 3 slides por vez
           navigation={{
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',

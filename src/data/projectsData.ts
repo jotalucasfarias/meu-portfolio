@@ -27,4 +27,11 @@ export const projectsData = [
     tags: ['React', 'TypeScript', 'TailwindCSS', 'Vite'],
     url: 'https://github.com/jotalucasfarias/meu-portfolio',
   },
+  {
+    title: 'Clone Meta',
+    description:
+      'Desenvolvimento de um clone da interface do site do Meta utilizando HTML, CSS e JavaScript, como parte do meu processo de aprendizado durante a faculdade, focando em replicar a estrutura, layout e interatividade da plataforma.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    deploy: 'https://jotalucasfarias.github.io/Clone-META/',
+  },
 ];
