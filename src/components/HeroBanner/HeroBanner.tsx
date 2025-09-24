@@ -1,6 +1,7 @@
 import { FiArrowRight, FiGithub, FiLinkedin } from 'react-icons/fi'; // Usando os mesmos ícones do Contact
 import { useInView } from 'react-intersection-observer';
 import { Link as ScrollLink } from 'react-scroll';
+import ScrollButtonDown from '../ui/ScrollButtonDOwn';
 
 export default function HeroBanner() {
   const { ref, inView } = useInView({
@@ -12,7 +13,7 @@ export default function HeroBanner() {
     <section
       id="home"
       ref={ref}
-      className=" flex items-center justify-center py-24 md:py-32 transition-colors duration-700"
+      className="h-[calc(100vh-48px)] flex flex-col items-center justify-evenly py-24 md:py-16 transition-colors duration-700"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-24 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center">
@@ -91,6 +92,7 @@ export default function HeroBanner() {
           </div>
         </div>
       </div>
+      <ScrollButtonDown nextSection="about" />
     </section>
   );
 }
